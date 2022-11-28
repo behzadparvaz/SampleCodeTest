@@ -8,10 +8,10 @@ namespace ConsoleAppSample
 {
     public class SampleCode
     {
-        public Task Print(string message)
+        public async Task PrintAsync(string message)
         {
-           return Task.Run(() => {
-                Task.Delay(5000);
+            await Task.Run(async () => {
+                await Task.Delay(5000);
                 Console.WriteLine(message);
             });
         }
